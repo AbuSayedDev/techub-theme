@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zxx">
+<html <?php language_attributes() ?>>
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
