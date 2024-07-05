@@ -12,6 +12,8 @@ Techub is a Modern & Professional WordPress Theme perfectly suitable for Agency,
 
 ## Development Plugin kirki
 
+Kirki is a collection of tools & controls that allow developers to build rich user experiences in the WordPress customizer.
+
 > - [x] https://docs.themeum.com/kirki/
 
 ### Screenshot
