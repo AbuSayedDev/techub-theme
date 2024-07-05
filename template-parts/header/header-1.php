@@ -37,6 +37,7 @@
                 </div>
             </div>
         </div>
+        
         <div id="header-sticky" class="tp-header-bottom">
             <div class="tp-header-area">
                 <div class="container-fluid">

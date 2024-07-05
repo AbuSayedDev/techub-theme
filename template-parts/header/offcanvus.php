@@ -1,12 +1,11 @@
-<!-- tp-offcanvus-area-start -->
-<div class="tpoffcanvas-area">
+    <div class="tpoffcanvas-area">
         <div class="tpoffcanvas">
             <div class="tpoffcanvas__close-btn">
                 <button class="close-btn"><i class="fal fa-times"></i></button>
             </div>
             <div class="tpoffcanvas__logo">
                 <a href="index.html">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo/logo.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo/logo.png" alt="" />
                 </a>
             </div>
             <div class="tpoffcanvas__title">
