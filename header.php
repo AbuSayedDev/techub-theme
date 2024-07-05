@@ -10,7 +10,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class( ); ?> >
 
     <!-- Pre loader area -->
     <?php echo get_template_part('inc/common/loader'); ?>
