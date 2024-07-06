@@ -1,6 +1,6 @@
 <?php 
 
-// Adding Panels in Kirki
+// Adding techub options panels in Kirki
 new \Kirki\Panel(
 	'techub_options',
 	[
@@ -10,7 +10,7 @@ new \Kirki\Panel(
 	]
 );
 
-// techub logo section
+// logo section
 function techub_logo_section(){
 
     //Sections
@@ -99,5 +99,96 @@ function techub_top_header_info_section(){
     );
 
 }
-
 techub_top_header_info_section();
+
+// Header Top social section
+function techub_header_top_social_info_section(){
+
+    // Section
+    new \Kirki\Section(
+        'techub_header_top_social_section',
+        [
+            'title'       => esc_html__( 'Header Top Social', 'kirki' ),
+            'panel'       => 'techub_options',
+            'priority'    => 160,
+        ]
+    );
+
+    // Facebook URL
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'facebook_url',
+            'label'    => esc_html__( 'Facebook URL', 'kirki' ),
+            'default'  => esc_html__( '#' ),
+            'section'  => 'techub_header_top_social_section',
+            'priority' => 10,
+        ]
+    );
+
+    // LinkedIn URL
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'linkedin_url',
+            'label'    => esc_html__( 'LinkedIn URL', 'kirki' ),
+            'default'  => esc_html__( '#' ),
+            'section'  => 'techub_header_top_social_section',
+            'priority' => 10,
+        ]
+    );
+
+    // Twitter URL
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'twitter_url',
+            'label'    => esc_html__( 'Twitter URL', 'kirki' ),
+            'default'  => esc_html__( '#' ),
+            'section'  => 'techub_header_top_social_section',
+            'priority' => 10,
+        ]
+    );
+
+    // Instagram URL
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'instagram_url',
+            'label'    => esc_html__( 'Instagram URL', 'kirki' ),
+            'default'  => esc_html__( '#' ),
+            'section'  => 'techub_header_top_social_section',
+            'priority' => 10,
+        ]
+    );
+
+    // Pinterest URL
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'pinterest_url',
+            'label'    => esc_html__( 'Pinterest URL', 'kirki' ),
+            'default'  => esc_html__( '#' ),
+            'section'  => 'techub_header_top_social_section',
+            'priority' => 10,
+        ]
+    );
+
+    // Tiktok URL
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'tiktok_url',
+            'label'    => esc_html__( 'Tiktok URL', 'kirki' ),
+            'default'  => esc_html__( '#' ),
+            'section'  => 'techub_header_top_social_section',
+            'priority' => 10,
+        ]
+    );
+
+    // YouTube URL
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'youtube_url',
+            'label'    => esc_html__( 'YouTube URL', 'kirki' ),
+            'default'  => esc_html__( '#' ),
+            'section'  => 'techub_header_top_social_section',
+            'priority' => 10,
+        ]
+    );
+}
+techub_header_top_social_info_section();

@@ -42,10 +42,7 @@
                                 </ul>
                             </div>
                             <div class="tp-header-top-social">
-                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                                <?php echo techub_social(); ?>
                             </div>
                         </div>
                     </div>
