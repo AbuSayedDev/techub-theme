@@ -1,5 +1,8 @@
-  
-  
+<?php 
+ $techub_top_header_switch = get_theme_mod('techub_top_header_switch', false);
+?>
+
+
     <!-- Search Popup Section -->
     <?php echo get_template_part('template-parts/header/header-search'); ?>
     
@@ -8,6 +11,8 @@
 
     <!-- header area start -->
     <header class="tp-header-height">
+        <!-- HEADER TOP -->
+        <?php if(!empty($techub_top_header_switch)) : ?>
         <div class="tp-header-top tp-header-5-top pt-10 pb-10 pl-110 pr-110 d-none d-xl-block">
             <div class="container-fluid">
                 <div class="row">
@@ -37,14 +42,16 @@
                 </div>
             </div>
         </div>
+        <?php endif ?>
         
+        <!-- Header -->
         <div id="header-sticky" class="tp-header-bottom">
             <div class="tp-header-area">
                 <div class="container-fluid">
                     <div class="row align-items-center">
                         <div class="col-xl-2 col-lg-4 col-md-4 col-6">
                             <div class="logo">
-                                <a href="index.html"><img src="<?php echo get_template_directory_uri(); ?> /assets/img/logo/logo.png" alt=""></a>
+                                <?php echo techub_site_logo(); ?>
                             </div>
                         </div>
                         <div class="col-xl-6 d-none d-xl-block">
