@@ -54,7 +54,7 @@ function techub_top_header_info_section(){
     new \Kirki\Field\Checkbox_Switch(
         [
             'settings'    => 'techub_top_header_switch',
-            'label'       => esc_html__( 'Header Top Switch', 'kirki' ),
+            'label'       => esc_html__( 'Header top switch', 'kirki' ),
             'description' => esc_html__( 'Header top switch control', 'kirki' ),
             'section'     => 'techub_top_header_section',
             'default'     => 'off',
@@ -62,6 +62,39 @@ function techub_top_header_info_section(){
                 'on'  => esc_html__( 'Enable', 'kirki' ),
                 'off' => esc_html__( 'Disable', 'kirki' ),
             ],
+        ]
+    );
+
+    // Address text
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'techub_top_header_address',
+            'label'    => esc_html__( 'Address Text', 'kirki' ),
+            'default'  => esc_html__( 'Manchester 21, Zurich, CH', 'kirki' ),
+            'section'  => 'techub_top_header_section',
+            'priority' => 10,
+        ]
+    );
+
+    // Address URL
+    new \Kirki\Field\URL(
+        [
+            'settings' => 'techub_top_header_address_url',
+            'label'    => esc_html__( 'Address URL', 'kirki' ),
+            'section'  => 'techub_top_header_section',
+            'default'  => '#',
+            'priority' => 10,
+        ]
+    );
+
+    // Email ID
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'techub_top_header_emailID',
+            'label'    => esc_html__( 'Email ID', 'kirki' ),
+            'default'  => esc_html__( 'techubinfo@mail.com' ),
+            'section'  => 'techub_top_header_section',
+            'priority' => 10,
         ]
     );
 

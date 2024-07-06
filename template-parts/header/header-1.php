@@ -1,5 +1,8 @@
 <?php 
  $techub_top_header_switch = get_theme_mod('techub_top_header_switch', false);
+ $techub_top_header_address = get_theme_mod( 'techub_top_header_address', 'Manchester 21, Zurich, CH');
+ $techub_top_header_address_url = get_theme_mod( 'techub_top_header_address_url', '#');
+ $techub_top_header_emailID = get_theme_mod( 'techub_top_header_emailID', 'techubinfo@mail.com');
 ?>
 
 
@@ -18,8 +21,15 @@
                 <div class="row">
                     <div class="col-xl-6">
                         <div class="tp-header-top-address tp-header-5-top-address">
-                            <span><i class="fa-thin fa-location-dot"></i><a href="https://www.google.com/maps/@41.6758525,-86.2531698,18.17z"> Manchester 21, Zurich, CH</a></span>
-                            <span><i class="fa-light fa-envelope"></i> <a href="mailto:techubinfo@mail.com">techubinfo@mail.com</a></span>
+
+                            <?php if(!empty($techub_top_header_address)) : ?>
+                                <span><i class="fa-thin fa-location-dot"></i><a <?php 
+                                    if(!empty($techub_top_header_address_url)) : ?> href="<?php echo $techub_top_header_address_url; ?>" <?php endif ?> target="_blink"> <?php echo $techub_top_header_address; ?></a></span>
+                            <?php endif ?>
+
+                            <?php if(!empty($techub_top_header_emailID)) : ?>
+                            <span><i class="fa-light fa-envelope"></i> <a href="mailto:<?php echo $techub_top_header_emailID; ?>"><?php echo $techub_top_header_emailID; ?></a></span>
+                            <?php endif ?>
                         </div>
                     </div>
                     <div class="col-xl-6">
