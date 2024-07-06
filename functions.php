@@ -29,3 +29,14 @@ add_action("after_setup_theme", "techub_theme_support");
 // stylesheet and script file
 include_once('inc/common/script.php');
 
+// kirki all function
+
+if(class_exists('kirki')){
+    include_once('inc/techub-kirki.php');
+}
+
+// template function
+include_once('inc/template-function.php');
+
+
+
