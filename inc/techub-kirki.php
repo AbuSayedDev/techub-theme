@@ -10,35 +10,9 @@ new \Kirki\Panel(
 	]
 );
 
-// logo section
-function techub_logo_section(){
 
-    //Sections
-    new \Kirki\Section(
-        'techub_site_logo_section',
-        [
-            'title'       => esc_html__( 'Site Logo', 'techub' ),
-            'panel'       => 'techub_options',
-            'priority'    => 160,
-        ]
-    );
-
-    // Site Logo
-    new \Kirki\Field\Image(
-        [
-            'settings'    => 'site_logo',
-            'label'       => esc_html__( 'Site Logo', 'techub' ),
-            'description' => esc_html__( 'Suggested image dimensions: 350 × 100 pixels.', 'techub' ),
-            'section'     => 'techub_site_logo_section',
-            'default'     => get_template_directory_uri().'/assets/img/logo/logo.png',
-        ]
-    );
-}
-techub_logo_section();
-
-
-// techub top header section
-function techub_top_header_info_section(){
+// techub header top section
+function techub_header_top_section(){
 
     // Section
     new \Kirki\Section(
@@ -99,16 +73,122 @@ function techub_top_header_info_section(){
     );
 
 }
-techub_top_header_info_section();
+techub_header_top_section();
 
-// Header Top social section
-function techub_header_top_social_info_section(){
+
+// Main Header section
+function techub_header_section(){
+
+    //Main Header Section
+    new \Kirki\Section(
+        'techub_header_section',
+        [
+            'title'       => esc_html__( 'Main Header', 'techub' ),
+            'panel'       => 'techub_options',
+            'priority'    => 160,
+        ]
+    );
+
+    /* 
+     Main header logo section START code 
+    */
+
+    //Logo Sections
+    new \Kirki\Section(
+        'techub_site_logo_section',
+        [
+            'title'       => esc_html__( 'Site Logo', 'techub' ),
+            'panel'       => 'techub_options',
+            'section'     => 'techub_header_section',
+            'priority'    => 160,
+        ]
+    );
+
+    // Site Logo
+    new \Kirki\Field\Image(
+        [
+            'settings'    => 'site_logo',
+            'label'       => esc_html__( 'Site Logo', 'techub' ),
+            'description' => esc_html__( 'Suggested image dimensions: 350 × 100 pixels.', 'techub' ),
+            'section'     => 'techub_site_logo_section',
+            'default'     => get_template_directory_uri().'/assets/img/logo/logo.png',
+        ]
+    );
+
+    // demo
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'demo_text',
+            'label'    => esc_html__( 'Demo text', 'techub' ),
+            'default'  => esc_html__( '#' ),
+            'section'  => 'techub_header_section',
+            'priority' => 10,
+        ]
+    );
+
+    /* 
+     Main header BUTTON section Start 
+    */
+
+    // Header Button
+    new \Kirki\Section(
+        'techub_button_section',
+        [
+            'title'       => esc_html__( 'Header Button', 'techub' ),
+            'panel'       => 'techub_options',
+            'section'     => 'techub_header_section',
+            'priority'    => 160,
+        ]
+    );
+
+    // Button Switch
+    new \Kirki\Field\Checkbox_Switch(
+        [
+            'settings'    => 'button_switch',
+            'label'       => esc_html__( 'Button Switch', 'techub' ),
+            'description' => esc_html__( 'Button switch control', 'techub' ),
+            'section'     => 'techub_button_section',
+            'default'     => 'on',
+            'choices'     => [
+                'on'  => esc_html__( 'Enable', 'techub' ),
+                'off' => esc_html__( 'Disable', 'techub' ),
+            ],
+        ]
+    );
+
+    // Button Text
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'button_text',
+            'label'    => esc_html__( 'Button Text', 'techub' ),
+            'default'  => esc_html__( 'Get a Quete' ),
+            'section'  => 'techub_button_section',
+            'priority' => 10,
+        ]
+    );
+
+    // Button URL
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'button_url',
+            'label'    => esc_html__( 'Button URL', 'techub' ),
+            'default'  => esc_html__( '#' ),
+            'section'  => 'techub_button_section',
+            'priority' => 10,
+        ]
+    );
+}
+techub_header_section();
+
+
+// Techub social section
+function techub_social_section(){
 
     // Section
     new \Kirki\Section(
-        'techub_header_top_social_section',
+        'techub_social_section',
         [
-            'title'       => esc_html__( 'Header Top Social', 'techub' ),
+            'title'       => esc_html__( 'Techub Social', 'techub' ),
             'panel'       => 'techub_options',
             'priority'    => 160,
         ]
@@ -120,7 +200,7 @@ function techub_header_top_social_info_section(){
             'settings' => 'facebook_url',
             'label'    => esc_html__( 'Facebook URL', 'techub' ),
             'default'  => esc_html__( '#' ),
-            'section'  => 'techub_header_top_social_section',
+            'section'  => 'techub_social_section',
             'priority' => 10,
         ]
     );
@@ -131,7 +211,7 @@ function techub_header_top_social_info_section(){
             'settings' => 'linkedin_url',
             'label'    => esc_html__( 'LinkedIn URL', 'techub' ),
             'default'  => esc_html__( '#' ),
-            'section'  => 'techub_header_top_social_section',
+            'section'  => 'techub_social_section',
             'priority' => 10,
         ]
     );
@@ -142,7 +222,7 @@ function techub_header_top_social_info_section(){
             'settings' => 'twitter_url',
             'label'    => esc_html__( 'Twitter URL', 'techub' ),
             'default'  => esc_html__( '#' ),
-            'section'  => 'techub_header_top_social_section',
+            'section'  => 'techub_social_section',
             'priority' => 10,
         ]
     );
@@ -153,7 +233,7 @@ function techub_header_top_social_info_section(){
             'settings' => 'instagram_url',
             'label'    => esc_html__( 'Instagram URL', 'techub' ),
             'default'  => esc_html__( '#' ),
-            'section'  => 'techub_header_top_social_section',
+            'section'  => 'techub_social_section',
             'priority' => 10,
         ]
     );
@@ -164,7 +244,7 @@ function techub_header_top_social_info_section(){
             'settings' => 'pinterest_url',
             'label'    => esc_html__( 'Pinterest URL', 'techub' ),
             'default'  => esc_html__( '#' ),
-            'section'  => 'techub_header_top_social_section',
+            'section'  => 'techub_social_section',
             'priority' => 10,
         ]
     );
@@ -175,7 +255,7 @@ function techub_header_top_social_info_section(){
             'settings' => 'tiktok_url',
             'label'    => esc_html__( 'Tiktok URL', 'techub' ),
             'default'  => esc_html__( '#' ),
-            'section'  => 'techub_header_top_social_section',
+            'section'  => 'techub_social_section',
             'priority' => 10,
         ]
     );
@@ -186,9 +266,11 @@ function techub_header_top_social_info_section(){
             'settings' => 'youtube_url',
             'label'    => esc_html__( 'YouTube URL', 'techub' ),
             'default'  => esc_html__( '#' ),
-            'section'  => 'techub_header_top_social_section',
+            'section'  => 'techub_social_section',
             'priority' => 10,
         ]
     );
 }
-techub_header_top_social_info_section();
+techub_social_section();
+
+

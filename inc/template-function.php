@@ -4,10 +4,10 @@
 function techub_site_logo(){
    $site_logo = get_theme_mod('site_logo', get_template_directory_uri().'/assets/img/logo/logo.png');  ?>
    
-  <a href="<?php echo home_url('/'); ?>"><img src="<?php echo $site_logo; ?>" alt="<?php echo bloginfo(); ?>"></a>
+  <a href="<?php echo home_url('/'); ?>"><img src="<?php echo esc_url($site_logo); ?>" alt="<?php echo bloginfo(); ?>"></a>
   <?php }
 
-// Header Top social
+// Techub social
 function techub_social(){ 
   
     $facebook_url = get_theme_mod( 'facebook_url', __('#', 'techub') );
