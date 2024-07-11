@@ -115,14 +115,18 @@ function techub_header_section(){
         ]
     );
 
-    // demo
-    new \Kirki\Field\Text(
+    // Search Switch
+    new \Kirki\Field\Checkbox_Switch(
         [
-            'settings' => 'demo_text',
-            'label'    => esc_html__( 'Demo text', 'techub' ),
-            'default'  => esc_html__( '#' ),
-            'section'  => 'techub_header_section',
-            'priority' => 10,
+            'settings'    => 'search_switch',
+            'label'       => esc_html__( 'Search Switch', 'techub' ),
+            'description' => esc_html__( 'Search switch control', 'techub' ),
+            'section'     => 'techub_header_section',
+            'default'     => 'on',
+            'choices'     => [
+                'on'  => esc_html__( 'Enable', 'techub' ),
+                'off' => esc_html__( 'Disable', 'techub' ),
+            ],
         ]
     );
 

@@ -6,6 +6,7 @@
  $techub_top_header_emailID = get_theme_mod( 'techub_top_header_emailID', __('techubinfo@mail.com', 'techub'));
 
 //  Main header 
+$search_switch = get_theme_mod('search_switch', false);
  $button_switch = get_theme_mod('button_switch', false);
  $button_text = get_theme_mod('button_text', __('Get a Quete', 'techub'));
  $button_url = get_theme_mod('button_url', __('#', 'techub'));
@@ -104,19 +105,21 @@
                         <div class="col-xl-4 col-lg-8 col-md-8 col-6">
                             <div class="tp-header-right d-flex justify-content-end align-items-center">
 
-                            <?php if(!empty($button_switch)) : ?>
+                            <?php if(!empty($search_switch)) : ?>
                                 <!-- header search button -->
                                 <div class="tp-header-search search-box-outer d-none d-md-block">
                                     <button><i class="flaticon-search"></i></button>
                                 </div>
+                            <?php endif ?>
 
+                            <?php if(!empty($button_switch)) : ?>
                                 <!-- header button -->
                                 <?php if(!empty($button_text)) : ?>
-                                <div class="tp-header-button d-none d-lg-block">
-                                    <a class="tp-header-btn" rel="noreferrer" href="<?php echo esc_url( $button_url ); ?>" target="_blank"><span><?php echo esc_html( $button_text ); ?></span></a>
-                                </div>
+                                    <div class="tp-header-button d-none d-lg-block">
+                                        <a class="tp-header-btn" rel="noreferrer" href="<?php echo esc_url( $button_url ); ?>" target="_blank"><span><?php echo esc_html( $button_text ); ?></span></a>
+                                    </div>
                                 <?php endif ?>
-                                <?php endif ?>
+                            <?php endif ?>
 
                                 <!-- header mobile menu ber -->
                                 <div class="tp-header-menu-ber">
