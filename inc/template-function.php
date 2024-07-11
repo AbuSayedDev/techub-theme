@@ -10,41 +10,41 @@ function techub_site_logo(){
 // Header Top social
 function techub_social(){ 
   
-    $facebook_url = get_theme_mod( 'facebook_url', '#' );
-    $linkedin_url = get_theme_mod( 'linkedin_url', '#' );
-    $twitter_url = get_theme_mod( 'twitter_url', '#' );
-    $instagram_url = get_theme_mod( 'instagram_url', '#' );
-    $pinterest_url = get_theme_mod( 'pinterest_url', '#' );
-    $tiktok_url = get_theme_mod( 'tiktok_url', '#' );
-    $youtube_url = get_theme_mod( 'youtube_url', '#' );
+    $facebook_url = get_theme_mod( 'facebook_url', __('#', 'techub') );
+    $linkedin_url = get_theme_mod( 'linkedin_url', __('#', 'techub') );
+    $twitter_url = get_theme_mod( 'twitter_url', __('#', 'techub') );
+    $instagram_url = get_theme_mod( 'instagram_url', __('#', 'techub') );
+    $pinterest_url = get_theme_mod( 'pinterest_url', __('#', 'techub') );
+    $tiktok_url = get_theme_mod( 'tiktok_url', __('#', 'techub') );
+    $youtube_url = get_theme_mod( 'youtube_url', __('#', 'techub') );
   ?>
 
 <?php if(!empty($facebook_url)) : ?>
-  <a href="<?php echo $facebook_url; ?>" target="_blink"><i class="fa-brands fa-facebook"></i></a>
+  <a href="<?php echo esc_url( $facebook_url ); ?>" target="_blink"><i class="fa-brands fa-facebook"></i></a>
 <?php endif ?>
 
 <?php if(!empty($linkedin_url)) : ?>
-  <a href="<?php echo $linkedin_url; ?>" target="_blink"><i class="fa-brands fa-linkedin"></i></a>
+  <a href="<?php echo esc_url( $linkedin_url ); ?>" target="_blink"><i class="fa-brands fa-linkedin"></i></a>
 <?php endif ?>
 
 <?php if(!empty($twitter_url)) : ?>
-  <a href="<?php echo $twitter_url; ?>" target="_blink"><i class="fa-brands fa-twitter"></i></a>
+  <a href="<?php echo esc_url($twitter_url); ?>" target="_blink"><i class="fa-brands fa-twitter"></i></a>
 <?php endif ?>
 
 <?php if(!empty($instagram_url)) : ?>
-  <a href="<?php echo $instagram_url; ?>" target="_blink"><i class="fa-brands fa-instagram"></i></a>
+  <a href="<?php echo esc_url($instagram_url); ?>" target="_blink"><i class="fa-brands fa-instagram"></i></a>
 <?php endif ?>
 
 <?php if(!empty($pinterest_url)) : ?>
-  <a href="<?php echo $pinterest_url; ?>" target="_blink"><i class="fa-brands fa-pinterest"></i></a>
+  <a href="<?php echo esc_url($pinterest_url); ?>" target="_blink"><i class="fa-brands fa-pinterest"></i></a>
 <?php endif ?>
 
 <?php if(!empty($tiktok_url)) : ?>
-  <a href="<?php echo $tiktok_url; ?>" target="_blink"><i class="fa-brands fa-tiktok"></i></a>
+  <a href="<?php echo esc_url($tiktok_url); ?>" target="_blink"><i class="fa-brands fa-tiktok"></i></a>
 <?php endif ?>
 
 <?php if(!empty($youtube_url)) : ?>
-  <a href="<?php echo $youtube_url; ?>" target="_blink"><i class="fa-brands fa-youtube"></i></a>
+  <a href="<?php echo esc_url($youtube_url); ?>" target="_blink"><i class="fa-brands fa-youtube"></i></a>
 <?php endif ?>
 
 <?php }

@@ -1,8 +1,8 @@
 <?php 
  $techub_top_header_switch = get_theme_mod('techub_top_header_switch', false);
- $techub_top_header_address = get_theme_mod( 'techub_top_header_address', 'Manchester 21, Zurich, CH');
- $techub_top_header_address_url = get_theme_mod( 'techub_top_header_address_url', '#');
- $techub_top_header_emailID = get_theme_mod( 'techub_top_header_emailID', 'techubinfo@mail.com');
+ $techub_top_header_address = get_theme_mod( 'techub_top_header_address', __('Manchester 21, Zurich, CH', 'techub'));
+ $techub_top_header_address_url = get_theme_mod( 'techub_top_header_address_url', __('#', 'techub'));
+ $techub_top_header_emailID = get_theme_mod( 'techub_top_header_emailID', __('techubinfo@mail.com', 'techub'));
 ?>
 
 
@@ -24,11 +24,11 @@
 
                             <?php if(!empty($techub_top_header_address)) : ?>
                                 <span><i class="fa-thin fa-location-dot"></i><a <?php 
-                                    if(!empty($techub_top_header_address_url)) : ?> href="<?php echo $techub_top_header_address_url; ?>" <?php endif ?> target="_blink"> <?php echo $techub_top_header_address; ?></a></span>
+                                    if(!empty($techub_top_header_address_url)) : ?> href="<?php echo esc_url( $techub_top_header_address_url ); ?>" <?php endif ?> target="_blink"> <?php echo esc_html( $techub_top_header_address ); ?></a></span>
                             <?php endif ?>
 
                             <?php if(!empty($techub_top_header_emailID)) : ?>
-                            <span><i class="fa-light fa-envelope"></i> <a href="mailto:<?php echo $techub_top_header_emailID; ?>"><?php echo $techub_top_header_emailID; ?></a></span>
+                            <span><i class="fa-light fa-envelope"></i> <a href="mailto:<?php echo esc_attr( $techub_top_header_emailID ); ?>"><?php echo esc_html($techub_top_header_emailID); ?></a></span>
                             <?php endif ?>
                         </div>
                     </div>

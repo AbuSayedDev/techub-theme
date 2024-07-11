@@ -5,8 +5,8 @@ new \Kirki\Panel(
 	'techub_options',
 	[
 		'priority'    => 10,
-		'title'       => esc_html__( 'Techub Options', 'kirki' ),
-		'description' => esc_html__( 'My Panel Description.', 'kirki' ),
+		'title'       => esc_html__( 'Techub Options', 'techub' ),
+		'description' => esc_html__( 'My Panel Description.', 'techub' ),
 	]
 );
 
@@ -17,7 +17,7 @@ function techub_logo_section(){
     new \Kirki\Section(
         'techub_site_logo_section',
         [
-            'title'       => esc_html__( 'Site Logo', 'kirki' ),
+            'title'       => esc_html__( 'Site Logo', 'techub' ),
             'panel'       => 'techub_options',
             'priority'    => 160,
         ]
@@ -27,8 +27,8 @@ function techub_logo_section(){
     new \Kirki\Field\Image(
         [
             'settings'    => 'site_logo',
-            'label'       => esc_html__( 'Site Logo', 'kirki' ),
-            'description' => esc_html__( 'Suggested image dimensions: 350 × 100 pixels.', 'kirki' ),
+            'label'       => esc_html__( 'Site Logo', 'techub' ),
+            'description' => esc_html__( 'Suggested image dimensions: 350 × 100 pixels.', 'techub' ),
             'section'     => 'techub_site_logo_section',
             'default'     => get_template_directory_uri().'/assets/img/logo/logo.png',
         ]
@@ -44,7 +44,7 @@ function techub_top_header_info_section(){
     new \Kirki\Section(
         'techub_top_header_section',
         [
-            'title'       => esc_html__( 'Header Top', 'kirki' ),
+            'title'       => esc_html__( 'Header Top', 'techub' ),
             'panel'       => 'techub_options',
             'priority'    => 160,
         ]
@@ -54,13 +54,13 @@ function techub_top_header_info_section(){
     new \Kirki\Field\Checkbox_Switch(
         [
             'settings'    => 'techub_top_header_switch',
-            'label'       => esc_html__( 'Header top switch', 'kirki' ),
-            'description' => esc_html__( 'Header top switch control', 'kirki' ),
+            'label'       => esc_html__( 'Header top switch', 'techub' ),
+            'description' => esc_html__( 'Header top switch control', 'techub' ),
             'section'     => 'techub_top_header_section',
             'default'     => 'off',
             'choices'     => [
-                'on'  => esc_html__( 'Enable', 'kirki' ),
-                'off' => esc_html__( 'Disable', 'kirki' ),
+                'on'  => esc_html__( 'Enable', 'techub' ),
+                'off' => esc_html__( 'Disable', 'techub' ),
             ],
         ]
     );
@@ -69,8 +69,8 @@ function techub_top_header_info_section(){
     new \Kirki\Field\Text(
         [
             'settings' => 'techub_top_header_address',
-            'label'    => esc_html__( 'Address Text', 'kirki' ),
-            'default'  => esc_html__( 'Manchester 21, Zurich, CH', 'kirki' ),
+            'label'    => esc_html__( 'Address Text', 'techub' ),
+            'default'  => esc_html__( 'Manchester 21, Zurich, CH', 'techub' ),
             'section'  => 'techub_top_header_section',
             'priority' => 10,
         ]
@@ -80,7 +80,7 @@ function techub_top_header_info_section(){
     new \Kirki\Field\URL(
         [
             'settings' => 'techub_top_header_address_url',
-            'label'    => esc_html__( 'Address URL', 'kirki' ),
+            'label'    => esc_html__( 'Address URL', 'techub' ),
             'section'  => 'techub_top_header_section',
             'default'  => '#',
             'priority' => 10,
@@ -91,7 +91,7 @@ function techub_top_header_info_section(){
     new \Kirki\Field\Text(
         [
             'settings' => 'techub_top_header_emailID',
-            'label'    => esc_html__( 'Email ID', 'kirki' ),
+            'label'    => esc_html__( 'Email ID', 'techub' ),
             'default'  => esc_html__( 'techubinfo@mail.com' ),
             'section'  => 'techub_top_header_section',
             'priority' => 10,
@@ -108,7 +108,7 @@ function techub_header_top_social_info_section(){
     new \Kirki\Section(
         'techub_header_top_social_section',
         [
-            'title'       => esc_html__( 'Header Top Social', 'kirki' ),
+            'title'       => esc_html__( 'Header Top Social', 'techub' ),
             'panel'       => 'techub_options',
             'priority'    => 160,
         ]
@@ -118,7 +118,7 @@ function techub_header_top_social_info_section(){
     new \Kirki\Field\Text(
         [
             'settings' => 'facebook_url',
-            'label'    => esc_html__( 'Facebook URL', 'kirki' ),
+            'label'    => esc_html__( 'Facebook URL', 'techub' ),
             'default'  => esc_html__( '#' ),
             'section'  => 'techub_header_top_social_section',
             'priority' => 10,
@@ -129,7 +129,7 @@ function techub_header_top_social_info_section(){
     new \Kirki\Field\Text(
         [
             'settings' => 'linkedin_url',
-            'label'    => esc_html__( 'LinkedIn URL', 'kirki' ),
+            'label'    => esc_html__( 'LinkedIn URL', 'techub' ),
             'default'  => esc_html__( '#' ),
             'section'  => 'techub_header_top_social_section',
             'priority' => 10,
@@ -140,7 +140,7 @@ function techub_header_top_social_info_section(){
     new \Kirki\Field\Text(
         [
             'settings' => 'twitter_url',
-            'label'    => esc_html__( 'Twitter URL', 'kirki' ),
+            'label'    => esc_html__( 'Twitter URL', 'techub' ),
             'default'  => esc_html__( '#' ),
             'section'  => 'techub_header_top_social_section',
             'priority' => 10,
@@ -151,7 +151,7 @@ function techub_header_top_social_info_section(){
     new \Kirki\Field\Text(
         [
             'settings' => 'instagram_url',
-            'label'    => esc_html__( 'Instagram URL', 'kirki' ),
+            'label'    => esc_html__( 'Instagram URL', 'techub' ),
             'default'  => esc_html__( '#' ),
             'section'  => 'techub_header_top_social_section',
             'priority' => 10,
@@ -162,7 +162,7 @@ function techub_header_top_social_info_section(){
     new \Kirki\Field\Text(
         [
             'settings' => 'pinterest_url',
-            'label'    => esc_html__( 'Pinterest URL', 'kirki' ),
+            'label'    => esc_html__( 'Pinterest URL', 'techub' ),
             'default'  => esc_html__( '#' ),
             'section'  => 'techub_header_top_social_section',
             'priority' => 10,
@@ -173,7 +173,7 @@ function techub_header_top_social_info_section(){
     new \Kirki\Field\Text(
         [
             'settings' => 'tiktok_url',
-            'label'    => esc_html__( 'Tiktok URL', 'kirki' ),
+            'label'    => esc_html__( 'Tiktok URL', 'techub' ),
             'default'  => esc_html__( '#' ),
             'section'  => 'techub_header_top_social_section',
             'priority' => 10,
@@ -184,7 +184,7 @@ function techub_header_top_social_info_section(){
     new \Kirki\Field\Text(
         [
             'settings' => 'youtube_url',
-            'label'    => esc_html__( 'YouTube URL', 'kirki' ),
+            'label'    => esc_html__( 'YouTube URL', 'techub' ),
             'default'  => esc_html__( '#' ),
             'section'  => 'techub_header_top_social_section',
             'priority' => 10,
