@@ -21,6 +21,15 @@ function techub_theme_support()
 
     // Post Formats
     add_theme_support('post-formats', array('aside', 'gallery', 'image', 'video', 'audio', 'quote', 'status', 'chat', 'link'));
+
+    // Register nav menu
+    register_nav_menus( array(
+        'primary-menu' => __('Primary Menu', 'techub'),
+        'footer-menu' => __('Footer Menu', 'techub'),
+        'top-Header-menu' => __('Top Header Menu', 'techub'),
+        'offcanvus-menu' => __('Offcanvus Menu', 'techub'),
+
+    ) );
 }
 
 add_action("after_setup_theme", "techub_theme_support");
@@ -37,6 +46,9 @@ if(class_exists('kirki')){
 
 // template function
 include_once('inc/template-function.php');
+
+// nav walker function
+include_once('inc/nav-walker.php');
 
 
 

@@ -6,7 +6,7 @@
  $techub_top_header_emailID = get_theme_mod( 'techub_top_header_emailID', __('techubinfo@mail.com', 'techub'));
 
 //  Main header 
-$search_switch = get_theme_mod('search_switch', false);
+ $search_switch = get_theme_mod('search_switch', false);
  $button_switch = get_theme_mod('button_switch', false);
  $button_text = get_theme_mod('button_text', __('Get a Quete', 'techub'));
  $button_url = get_theme_mod('button_url', __('#', 'techub'));
@@ -42,11 +42,15 @@ $search_switch = get_theme_mod('search_switch', false);
                     <div class="col-xl-6">
                         <div class="tp-header-top-right d-flex justify-content-end">
                             <div class="tp-header-top-menu">
-                                <ul>
-                                    <li><a href="faq.html">Faq <span>/</span></a></li>
-                                    <li><a href="service.html">Service <span>/</span></a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
+                                <!-- Top menu -->
+                                <?php wp_nav_menu( array(
+                                    'theme_location' => 'top-Header-menu',
+                                    'menu_class' => '',
+                                    'menu_id' => '',
+                                    'container' => '',
+                                    'fallback_cb' => 'Techub_Walker_Nav_Menu::fallback',
+                                    'walker' => new Techub_Walker_Nav_Menu,
+                                ) ); ?>
                             </div>
                             <div class="tp-header-top-social">
                                 <?php echo techub_social(); ?>
@@ -71,33 +75,17 @@ $search_switch = get_theme_mod('search_switch', false);
                         <div class="col-xl-6 d-none d-xl-block">
                             <div class="main-menu main-menu-5">
                                 <nav class="tp-main-menu-content">
-                                    <ul>
-                                        <li class="has-dropdown"><a class="color-active" href="index.html">Home</a></li>
-                                        <li class="has-dropdown"><a href="#">Pages</a>
-                                            <ul class="submenu tp-submenu">
-                                                <li><a href="about.html">About Us</a></li>
-                                                <li><a href="team.html">Our Team</a></li>
-                                                <li><a href="team-details.html">Team Details</a></li>
-                                                <li><a href="portfolio.html">Our Portfolio</a></li>
-                                                <li><a href="portfolio-details.html">Portfolio Details</a></li>
-                                                <li><a href="error.html">Error</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="portfolio.html">Portfolio</a></li>
-                                        <li class="has-dropdown"><a href="service.html">Services</a>
-                                            <ul class="submenu tp-submenu">
-                                                <li><a href="service.html">Our Service</a></li>
-                                                <li><a href="service-details.html">Service Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-dropdown"><a href="blog.html">Blog</a>
-                                            <ul class="submenu tp-submenu">
-                                                <li><a href="blog-sideber.html">Blog Sidebar</a></li>
-                                                <li><a href="blog-details.html">Blog Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                    </ul>
+                                    
+                                    <!-- primary menu -->
+                                    <?php wp_nav_menu( array(
+                                        'theme_location' => 'primary-menu',
+                                        'menu_class' => '',
+                                        'menu_id' => '',
+                                        'container' => '',
+                                        'fallback_cb' => 'Techub_Walker_Nav_Menu::fallback',
+                                        'walker' => new Techub_Walker_Nav_Menu,
+                                    ) ); ?>
+
                                 </nav>
                             </div>
                         </div>
